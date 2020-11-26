@@ -1,6 +1,6 @@
-package AbstractFactory.MagicWord;
+package factoryMethod.AbstractFactory.MagicWord;
 
-import AbstractFactory.Food;
+import factoryMethod.AbstractFactory.Food;
 
 /**
  * @Author: xk

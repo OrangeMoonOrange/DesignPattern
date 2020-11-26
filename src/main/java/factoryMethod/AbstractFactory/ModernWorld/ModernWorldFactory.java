@@ -1,8 +1,8 @@
-package AbstractFactory.ModernWorld;
+package factoryMethod.AbstractFactory.ModernWorld;
 
-import AbstractFactory.AbastractFactory;
-import AbstractFactory.Food;
-import AbstractFactory.Weapon;
+import factoryMethod.AbstractFactory.AbastractFactory;
+import factoryMethod.AbstractFactory.Food;
+import factoryMethod.AbstractFactory.Weapon;
 
 /**
  * @Author: xk

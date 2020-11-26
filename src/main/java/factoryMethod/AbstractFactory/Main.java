@@ -1,8 +1,6 @@
-package AbstractFactory;
+package factoryMethod.AbstractFactory;
 
-import AbstractFactory.AbastractFactory;
-import AbstractFactory.MagicWord.MagicWorldFactory;
-import AbstractFactory.ModernWorld.ModernWorldFactory;
+import factoryMethod.AbstractFactory.MagicWord.MagicWorldFactory;
 
 /**
  * @Author: xk

@@ -1,4 +1,4 @@
-package AbstractFactory;
+package factoryMethod.AbstractFactory;
 
 /**
  * @Author: xk

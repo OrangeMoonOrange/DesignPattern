@@ -1,8 +1,8 @@
-package AbstractFactory.MagicWord;
+package factoryMethod.AbstractFactory.MagicWord;
 
-import AbstractFactory.AbastractFactory;
-import AbstractFactory.Food;
-import AbstractFactory.Weapon;
+import factoryMethod.AbstractFactory.AbastractFactory;
+import factoryMethod.AbstractFactory.Food;
+import factoryMethod.AbstractFactory.Weapon;
 
 /**
  * @Author: xk

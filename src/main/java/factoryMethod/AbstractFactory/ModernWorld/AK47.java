@@ -1,6 +1,6 @@
-package AbstractFactory.ModernWorld;
+package factoryMethod.AbstractFactory.ModernWorld;
 
-import AbstractFactory.Weapon;
+import factoryMethod.AbstractFactory.Weapon;
 
 /**
  * @Author: xk

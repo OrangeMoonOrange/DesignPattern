@@ -6,12 +6,11 @@ import java.util.List;
 /**
  * @Author: xk
  * @Date: 2020/11/26 13:16
- * @Desc:
- *  模仿
- *     javax.servlet.Filter
- *     javax.servlet.FilterChain
- *     完成对Request，Response 的过滤 ，Request 的顺序为 Request1、Request2、Request3 。
- *     对Response的过滤顺序是Response3、Response2、Response1
+ * @Desc: 模仿
+ * javax.servlet.Filter
+ * javax.servlet.FilterChain
+ * 完成对Request，Response 的过滤 ，Request 的顺序为 Request1、Request2、Request3 。
+ * 对Response的过滤顺序是Response3、Response2、Response1
  */
 public class ServletMain {
 
@@ -31,24 +30,22 @@ class Response {
 }
 
 interface Filter {
-    boolean doFilter(Request request, Response response);
+    boolean doFilter(Request request, Response response, Filter filter);
 }
 
 class HTMLFilter implements Filter {
-
-    public boolean doFilter(Request request, Response response) {
-
-        return true;
-    }
-}
-
-class someFilter implements Filter {
-    public boolean doFilter(Request request, Response response) {
-
+    @Override
+    public boolean doFilter(Request request, Response response, Filter filter) {
         return false;
     }
 }
 
+class someFilter implements Filter {
+    @Override
+    public boolean doFilter(Request request, Response response, Filter filter) {
+        return false;
+    }
+}
 
 
 // FilterChain
@@ -60,8 +57,13 @@ class FilterChain implements Filter {
         return this;
     }
 
-    public boolean doFilter(Request request, Response response) {
-        return true;
+
+    @Override
+    public boolean doFilter(Request request, Response response, Filter filter) {
+        //递归终止条件
+
+        request.msg = "request1:已经处理";
+        return doFilter(request, response, filter);
     }
 }
 
@@ -74,7 +76,9 @@ class URLChain implements Filter {
         return this;
     }
 
-    public boolean doFilter(Request request, Response response) {
-        return true;
+
+    @Override
+    public boolean doFilter(Request request, Response response, Filter filter) {
+        return false;
     }
 }
